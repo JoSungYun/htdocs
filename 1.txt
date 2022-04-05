@@ -1,0 +1,5 @@
+    <ul>
+        <li>보기를 선택해주세요</li>
+    </ul>
+    <h2>javascript</h2>
+    jsp -> html control
