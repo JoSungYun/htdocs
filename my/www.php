@@ -34,16 +34,19 @@
         <input type="button" value="balck" onclick="document.getElementById('ta').className='black'" />
         <a href="http://localhost/write.php">쓰기</a>
     </div>
+    
     <article>
-        <?php
-        if(empty($_GET['id']) === false){
-        $sql = 'SELECT * FROM topic WHERE id ='.$_GET['id'];
-        $result = mysqli_query($conn,$sql);
-        $ro = mysqli_fetch_assoc($result);
-        echo '<h2>'.$ro['title'].'</h2>';
-        echo $ro['description'];
-        }
-    ?>
+    <form action="process.php" method="post">
+        <p><input type="text" name="title"></p>
+        <textarea name="description"></textarea>
+        <p><input type="text" name="author"></p>
+        <input type="submit" name="name" value="눌러">
+        
+        
+        
+        
+        
+    </form>
 
 
     </article>
