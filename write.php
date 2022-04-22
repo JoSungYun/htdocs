@@ -33,6 +33,7 @@
         <input type="button" value="white" onclick="document.getElementById('ta').className='white'" />
         <input type="button" value="balck" onclick="document.getElementById('ta').className='black'" />
         <a href="http://localhost/write.php">쓰기</a>
+        <a href="http://localhost/ohhoho.php">ohhoho</a>
     </div>
     <article>
     <form action="process.php" method="post">

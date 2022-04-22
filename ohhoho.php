@@ -24,7 +24,7 @@
         <ol>
             <?php
     while($ro = mysqli_fetch_assoc($result)){
-    echo '<li><a href="http://localhost/index.php?id='.$ro['id'].'">'.htmlspecialchars($ro['title']).'</a></li>'."\n";
+    echo '<li><a href="http://localhost/index.php?id='.$ro['id'].'">'.$ro['title'].'</a></li>'."\n";
 }
             ?>
         </ol>
@@ -36,18 +36,19 @@
         <a href="http://localhost/ohhoho.php">ohhoho</a>
     </div>
     <article>
-        <?php
-        if(empty($_GET['id']) === false){
-        $sql = 'SELECT * FROM topic WHERE id ='.$_GET['id'];
-        $result = mysqli_query($conn,$sql);
-        $ro = mysqli_fetch_assoc($result);
-        echo '<h2>'.htmlspecialchars($ro['title']).'</h2>';
-        echo strip_tags($ro['description'].'<a><h1><h2><h3><4><h5><ul><ol><li>');
-        }
-    ?>
-
+        <form action="process.php" method="post">
+            <p>제목: <input type="text" name="title" ></p>
+            <p>본문: <textarea name="description"></textarea></p>
+            <p>작성자: <input type="text" name="author"></p>
+            <input type="hidden" role="uploadcare-uploader" >
+            <input type="submit" name="name" value="눌러" >
+        </form>
 
     </article>
+    <script>
+        UPLOADCARE_PUBLIC_KEY = "e5f2c3a80b454ab729e7"
+    </script>
+    <script charset="utf-8" src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
 </body>
 
 </html>
