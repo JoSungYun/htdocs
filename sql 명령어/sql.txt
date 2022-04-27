@@ -1,0 +1,43 @@
+sql 접속 명령어 = mysql -hlocalhost -uroot -p 
+
+show databases;
+
+use dbname;
+
+show tables;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
