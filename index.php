@@ -20,12 +20,12 @@
 </head>
 
 <body id="ta">
-    <header class="jumbotron">
+    <header class="jumbotron text-center">
         <img src="myimg/log.png" alt="로고" class="imp-circle" id="logo">
         <h1><a href="index.php">JSP</a></h1>
     </header>
     <div class="row">
-        <nav class="col-md-1">
+        <nav class="col-md-3">
             <ol>
                 <?php
     while($ro = mysqli_fetch_assoc($result)){
@@ -34,7 +34,7 @@
             ?>
             </ol>
         </nav>
-        <div class="col-md-1">
+        <div class="col-md-9">
             <div id="control">
                 <input type="button" value="white" onclick="document.getElementById('ta').className='white'" />
                 <input type="button" value="balck" onclick="document.getElementById('ta').className='black'" />
