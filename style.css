@@ -1,6 +1,6 @@
 #logo {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 110px;
 }
 
 body.black {
@@ -13,4 +13,17 @@ body.white {
     color: black;
 }
 
+header img{
+    padding-top: 30px;
+}
+header h1{
+    height: 150px;
 
+    font-size: 50px;
+}
+.container{
+    padding-top: 20px;
+}
+#control{
+    margin-bottom: 40px;
+}

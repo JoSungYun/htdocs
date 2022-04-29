@@ -1,3 +1,5 @@
+C:\Bitnami\wampstack-8.1.4-0\mariadb\bin
+
 sql 접속 명령어 = mysql -hlocalhost -uroot -p 
 
 show databases;
