@@ -66,23 +66,27 @@ $result = mysqli_query($conn,$sql);
     </nav>
     <div id="content">
         <article>
-            <?php
-            if(empty($_GET['numtitle'])){
-                echo "hi";
-            }else{
-                $numtitle = mysqli_real_escape_string($conn,$_GET['numtitle']);
-                $sql = "SELECT * FROM have WHERE numtitle =".$numtitle;
-                $sql = "SELECT have.nickname, have.smtitle, have.description, user.uname, have.created FROM have LEFT JOIN user ON have.nickname = user.nickname WHERE have.numtitle=".$numtitle;
-                $result = mysqli_query($conn,$sql);
-                $row = mysqli_fetch_assoc($result);
-                ?>
-                <h2><?=htmlspecialchars($row['nickname'])?></h2>
-                <div><?=htmlspecialchars($row['smtitle'])?></div>
-                <div><?=htmlspecialchars($row['description'])?></div>
-                <div><?=htmlspecialchars($row['created'])?></div>
-                <?php
-            }
-                ?>
+            <form action="process.php" method="post">
+                <p>
+                    <label for="nickname">닉네임: </label>
+                    <input id="nickname" type="text" name="nickname">
+                </p>
+                <p>
+                    <label for="smtitle">bigtitle: </label>
+                    <input id="smtitle" type="text" name="bigtitle">
+                </p>
+                <p>
+                    <label for="smtitle">제목: </label>
+                    <input id="smtitle" type="text" name="smtitle">
+                </p>
+                <p>
+                    <label for="description">내용: </label>
+                    <textarea id="description" name="description" cols="40" rows="8"></textarea>
+                </p>
+                <p>
+                    <input type="submit" value="입력">
+                </p>
+            </form>
 
         </article>
         <input type="button" name="name" value="White" onclick="document.getElementById('body').className=''">
