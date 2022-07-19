@@ -39,14 +39,14 @@
 
                 <article>
                     <?php
-        if(empty($_GET['id']) === false){
-        $sql = 'SELECT * FROM topic WHERE id ='.$_GET['id'];
-        $result = mysqli_query($conn,$sql);
-        $ro = mysqli_fetch_assoc($result);
-        echo '<h2>'.htmlspecialchars($ro['title']).'</h2>';
-        echo strip_tags($ro['description'].'<a><h1><h2><h3><4><h5><ul><ol><li>');
-        }
-    ?>
+                        if(empty($_GET['id']) === false){
+                            $sql = 'SELECT * FROM topic WHERE id ='.$_GET['id'];
+                            $result = mysqli_query($conn,$sql);
+                            $ro = mysqli_fetch_assoc($result);
+                            echo '<h2>'.htmlspecialchars($ro['title']).'</h2>';
+                            echo strip_tags($ro['description'].'<a><h1><h2><h3><4><h5><ul><ol><li>');
+                        }
+                    ?>
                 </article>
                 <hr>
                 <div id="control">
